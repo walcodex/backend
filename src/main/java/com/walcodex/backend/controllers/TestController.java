@@ -5,7 +5,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.walcodex.backend.entity.USER;
 
 @RestController
 @CrossOrigin(origins = "*", allowedHeaders = "*")
@@ -17,14 +16,10 @@ public class TestController {
         return "Backend Application";
     }
     
-    @GetMapping("/hello")
-    public USER hello() {
-        return new USER("ravinder", 21);
+
+    @GetMapping("/public")
+    public String greet() {
+        return "This is the public endpoint!";
     }
 
-    @GetMapping("/public/greet")
-    public String greet() {
-        return "Hello, welcome to the public endpoint!";
-    }
-    
 }
