@@ -13,5 +13,8 @@ public class UserServices {
         this.userRepository = userRepository;
     }
 
+    public void someUserServiceMethod() {
+        userRepository.findAll();
+    }
     
 }

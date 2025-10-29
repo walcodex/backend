@@ -14,5 +14,9 @@ public class UserControllers {
     public UserControllers(UserServices userServices) {
         this.userServices = userServices;
     }
+
+    public void someUserControllerMethod() {
+        userServices.someUserServiceMethod();
+    }
     
 }
